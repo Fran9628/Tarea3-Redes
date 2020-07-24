@@ -8,8 +8,8 @@ public class Cliente {
     Socket clienteSocket = null;
     DataOutputStream mensajeSalidaDelCliente = null;
     DataInputStream mensajeEntradaAlCliente = null;
-    Integer servicioPuerto = 9876;
-    String servidorIP = "localhost";
+    final Integer servicioPuerto = 5929; // puerto del servidor
+    final String servidorIP = "192.168.122.215"; // ip del servidor
     String entradaRemota="";
     String mensaje_menu="";
     String mensajeUsuario="";
@@ -21,7 +21,7 @@ public class Cliente {
 
     try {
       System.out.println("Conectando ...");
-      clienteSocket = new Socket(servidorIP, servicioPuerto);
+      clienteSocket = new Socket(servidorIP, 9876);
       System.out.println("Conectando al servidor con IP: " + servidorIP + ", al puerto: " + servicioPuerto);
     } catch (final UnknownHostException e) {
       System.err.println("No conosco el servidor con IP: "+servidorIP);
@@ -196,7 +196,7 @@ public class Cliente {
 
         }else  if(tipo_medida.toLowerCase().equals("centigramo") || tipo_medida.toLowerCase().equals("centigramos") || tipo_medida.toLowerCase().equals("cg")){
           System.out.println("\nPasar de Centigramo a: ");
-          System.out.println("1) Kilogramo\n2) Hectogramo\n3) Decagramo\n4) Gramo\n5) Decigramo\n6) Miligramo\n");
+          System.out.println("1) Jilogramo\n2) Hectogramo\n3) Decagramo\n4) Gramo\n5) Decigramo\n6) Miligramo\n");
           System.out.print("Seleccione una opcion: ");
           convertir= entradaEstandar.readLine(); // leo a que deseo convertir
 
