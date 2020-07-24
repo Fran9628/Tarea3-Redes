@@ -12,7 +12,7 @@ public class Servidor {
 		Socket clienteSocket=null;
 		DataOutputStream mensajeSalidaDelServidor = null;
 		DataInputStream mensajeEntradaAlServidor = null;
-		Integer servicioPuerto = 9876;
+		Integer servicioPuerto = 5929;
 		String entradaRemota="";
 		boolean escuchando = true;
 		float valor_peso;
